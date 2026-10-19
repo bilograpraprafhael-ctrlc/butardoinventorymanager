@@ -53,15 +53,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body class="twilight-bg">
 
-    <header class="p-6 flex justify-between items-center max-w-6xl mx-auto w-full">
-        <a href="index.php" class="flex items-center space-x-2">
-            <i class="text-2xl text-cyan-400"></i>
-            <span class="font-bold text-xl tracking-wide">InventoryManager</span>
-        </a>
-        <nav>
-            <a href="register.php" class="text-sm bg-white text-cyan-400 hover:text-white hover:bg-cyan-400 transition p-3 rounded-2xl">Register</a>
-        </nav>
-    </header>
+        <header class="p-4 sm:p-6 max-w-6xl mx-auto w-full">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="text-3xl text-cyan-400"></i>
+                    <span class="font-bold text-xl sm:text-2xl tracking-wide">InventoryManager</span>
+                </div>
+                <nav class="hidden md:flex items-center space-x-4">
+                    <a href="login.php" class="text-sm font-medium hover:text-cyan-300 transition">Login</a>
+                    <a href="register.php" class="text-sm bg-cyan-500 text-slate-950 font-semibold px-4 py-2 rounded-full hover:bg-cyan-400 transition">Sign Up</a>
+                </nav>
+                <button id="menu-btn" class="md:hidden text-slate-200 hover:text-cyan-400 focus:outline-none p-1" aria-label="Toggle Navigation">
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <nav id="mobile-menu" class="hidden md:hidden flex-col space-y-3 pt-4 mt-3 border-t border-slate-800">
+                <a href="login.php" class="text-sm font-medium hover:text-cyan-300 transition py-1">Login</a>
+                <a href="register.php" class="text-sm bg-cyan-500 text-slate-950 font-semibold px-4 py-2 rounded-full hover:bg-cyan-400 transition text-center w-full block">Sign Up</a>
+            </nav>
+        </header>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                openIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+        </script>
 
     <main class="flex-grow flex items-center justify-center px-4 py-8">
         <div class="w-full max-w-md text-center">

@@ -75,7 +75,7 @@ if (isset($_GET['search'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - StockMaster</title>
+    <title>Admin Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -244,7 +244,7 @@ if (isset($_GET['search'])) {
     </div>
 
     <footer class="bg-slate-800 border-t border-slate-700 py-4 text-center text-xs text-gray-400">
-        <p>&copy; <?php echo date("Y"); ?> StockMaster System. Admin Panel.</p>
+        <p>&copy; <?php echo date("Y"); ?> Inventory Manager. Admin Dashboard.</p>
     </footer>
 
     <script>

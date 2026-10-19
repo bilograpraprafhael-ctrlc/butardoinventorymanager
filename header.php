@@ -14,7 +14,7 @@ require_once 'config.php';
     <header class="bg-indigo-700 text-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
             <a href="dashboard.php" class="text-2xl font-bold tracking-wide flex items-center gap-2">
-             StockMaster
+             InventoryManager
             </a>
             
             <?php if (isset($_SESSION['user_id'])): ?>
